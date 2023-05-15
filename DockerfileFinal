@@ -1,0 +1,19 @@
+FROM buildimage1
+
+WORKDIR tmprepo/
+
+RUN rm -f .git README.md
+
+WORKDIR tmprepo\frontend\src
+
+RUN rm -rf __tests__
+
+WORKDIR tmprepo\frontend\src\components
+
+RUN rm -rf __tests__
+
+WORKDIR tmprepo/frontend/
+
+EXPOSE 3000
+
+CMD ["npm","start"]

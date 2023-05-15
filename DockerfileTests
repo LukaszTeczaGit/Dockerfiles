@@ -1,0 +1,6 @@
+FROM buildimage1
+
+WORKDIR tmprepo/frontend/
+
+ENV CI=true
+RUN npm test
